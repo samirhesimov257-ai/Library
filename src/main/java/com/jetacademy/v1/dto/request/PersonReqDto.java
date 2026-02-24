@@ -1,0 +1,21 @@
+package com.jetacademy.v1.dto.request;
+
+import jakarta.websocket.server.ServerEndpoint;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.FieldDefaults;
+import org.springframework.boot.context.properties.bind.DefaultValue;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class PersonReqDto {
+    String firstname;
+    String surname;
+    Integer age;
+    Double balance;
+
+}
