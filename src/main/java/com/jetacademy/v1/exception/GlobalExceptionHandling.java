@@ -12,7 +12,13 @@ public class GlobalExceptionHandling {
 
 
     @ExceptionHandler(AuthorNotFoundException.class)
-    public ResponseEntity<?> AuthorIdHadler(AuthorNotFoundException ex){
-        return ResponseEntity.badRequest().body(Map.of("error",ex.getMessage()));
+    public ResponseEntity<?> AuthorIdHadler(AuthorNotFoundException ex) {
+        return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<?> UserAgeHandler(RuntimeException ex) {
+        return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+
     }
 }

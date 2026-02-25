@@ -27,7 +27,7 @@ public class PersonService {
     }
 
 
-    @Transactional
+//    @Transactional
     public void sendMoney(PaymentReqDto dto){
         sender(dto);
         receiver(dto);
